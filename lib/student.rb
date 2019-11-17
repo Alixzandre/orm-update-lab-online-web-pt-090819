@@ -48,10 +48,9 @@ attr_reader :id
   end
   
   def self.new_from_db(row)
-    new_song = self.new
-    new_song.id = row[0]
-    new_song.name = row[1]
-    new_song.grade = row[2]
-    new_song
+   id = row[0]
+   name = row[1]
+   grade = row[2]
+   self.new(id, name, grade)
   end
 end
