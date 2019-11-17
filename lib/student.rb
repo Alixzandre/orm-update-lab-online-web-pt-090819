@@ -28,7 +28,7 @@ attr_reader :id
  
   def save
     sql = <<-SQL
-      INSERT INTO songs (name, students)
+      INSERT INTO students (name, students)
       VALUES (?, ?)
     SQL
  
