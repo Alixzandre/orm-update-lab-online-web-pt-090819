@@ -22,6 +22,7 @@ attr_reader :id
   
   def self.drop_table
     sql = "DROP TABLE IS EXISTS students"
+    DB[:conn].execute(sql)
     
   end
  
