@@ -53,4 +53,6 @@ attr_reader :id
     grade = row[2]
     self.new(id, name, grade)
   end
+  
+  
 end
