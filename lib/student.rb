@@ -1,17 +1,17 @@
-class Song
+class Student
  
-attr_accessor :name, :album
+attr_accessor :name, :grade
 attr_reader :id
  
-  def initialize(id=nil, name, album)
+  def initialize(id=nil, name, grade)
     @id = id
     @name = name
-    @album = album
+    @grade = grade
   end
  
   def self.create_table
     sql =  <<-SQL
-      CREATE TABLE IF NOT EXISTS songs (
+      CREATE TABLE IF NOT EXISTS s (
         id INTEGER PRIMARY KEY,
         name TEXT,
         album TEXT
