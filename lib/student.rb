@@ -49,7 +49,9 @@ attr_reader :id
   
   def self.new_from_db
     new_student = Student.new
-    new_student =
+    new_student.id =
+    new_student
+    new_student.
     new_student
   end
 end
