@@ -11,7 +11,7 @@ attr_reader :id
  
   def self.create_table
     sql =  <<-SQL
-      CREATE TABLE IF NOT EXISTS s (
+      CREATE TABLE IF NOT EXISTS students (
         id INTEGER PRIMARY KEY,
         name TEXT,
         album TEXT
@@ -22,7 +22,7 @@ attr_reader :id
  
   def save
     sql = <<-SQL
-      INSERT INTO songs (name, album)
+      INSERT INTO songs (name, students)
       VALUES (?, ?)
     SQL
  
