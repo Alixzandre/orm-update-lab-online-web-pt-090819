@@ -23,7 +23,6 @@ attr_reader :id
   def self.drop_table
     sql = "DROP TABLE IF EXISTS students"
     DB[:conn].execute(sql)
-    
   end
  
   def save
@@ -46,5 +45,9 @@ attr_reader :id
     sql = "SELECT * FROM students WHERE name = ?"
     result = DB[:conn].execute(sql, name)[0]
     Student.new(result[0], result[1], result[2])
+  end
+  
+  def self.new_from_db
+    
   end
 end
